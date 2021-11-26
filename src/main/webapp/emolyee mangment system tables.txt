@@ -1,0 +1,19 @@
+create table manager
+(
+  ID int,
+  Name varchar2(200),
+  Email varchar2(400),
+  phoneno varchar2(10),
+  Org_name varchar2(400),
+  password varchar2(200) 
+);
+
+------------------------------
+create table employe
+(
+Empid int,
+Name  varchar2(200),
+Email varchar2(400),
+Sal float,
+ID int
+);
