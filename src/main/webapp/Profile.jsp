@@ -1,19 +1,21 @@
+<%@page import="model.Register"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <html>
 <head>
 <SCRIPT type="text/javascript">
-    window.history.forward();
-    function noBack() { window.history.forward(); }
+	window.history.forward();
+	function noBack() {
+		window.history.forward();
+	}
 </SCRIPT>
 <%
-
-response.setHeader("Cache-Control","no-cache");
-response.setHeader("Cache-Control","no-store");
-response.setHeader("Pragma","no-cache");
-response.setDateHeader ("Expires", 0);
-    if(session.getAttribute("token")==null){
-    //response.sendRedirect(request.getContextPath() + "/LogOut.jsp");
+response.setHeader("Cache-Control", "no-cache");
+response.setHeader("Cache-Control", "no-store");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+if (session.getAttribute("token") == null) {
+	//response.sendRedirect(request.getContextPath() + "/LogOut.jsp");
 
 }
 %>
@@ -40,111 +42,118 @@ response.setDateHeader ("Expires", 0);
 <title>Insert title here</title>
 </head>
 <body>
-<a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"
-			type="submit" data-toggle="modal" data-target="#userModal"><i
-			class="fa fa-user" aria-hidden="true"></i></a>&nbsp&nbsp&nbsp
-		<a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"
-			type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+	<a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"
+		type="submit" data-toggle="modal" data-target="#userModal"><i
+		class="fa fa-user" aria-hidden="true"></i></a>&nbsp&nbsp&nbsp
+
+	<div class="modal fade" id="userModal" tabindex="-1" role="dialog"
+		aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+
+					<h5 class="modal-title" id="exampleModalLabel">Profile</h5>
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="container text-center">
+						<div class="text-danger">
+							<i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i>
+						</div>
+						<br> <a href="LogoutServlet"
+							class="btn btn-light my-2 my-sm-0" type="submit"
+							data-toggle="modal" data-target="#userModal"><i
+							class="fa fa-user" aria-hidden="true"></i> </a>&nbsp&nbsp&nbsp <a
+							href="LogoutServlet" class="btn btn-light my-2 my-sm-0"
+							type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
 
 
-		<div class="modal fade" id="userModal" tabindex="-1" role="dialog"
-			aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
+						<div class="modal fade" id="userModal" tabindex="-1" role="dialog"
+							aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
 
-						<h5 class="modal-title" id="exampleModalLabel">Profile</h5>
-						<button type="button" class="close" data-dismiss="modal"
-							aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="container text-center">
-							<div class="text-danger">
-								<i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i>
+										<h5 class="modal-title" id="exampleModalLabel">Profile</h5>
+										<button type="button" class="close" data-dismiss="modal"
+											aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<%
+									//try{
+									Register u = (Register) session.getAttribute("User");
+									//}catch(Exception e)
+									//{
+									// e.printStackTrace();	
+									//}
+									%>
+									<div class="modal-body">
+										<div class="container text-center">
+											<div class="text-danger">
+												<i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i>
+											</div>
+											<br>
+
+											<table class="table">
+												<tbody>
+													<tr>
+														<th>ID</th>
+														<td><%=u.getId()%></td>
+													</tr>
+													<tr>
+														<th>Name</th>
+														<td><%=u.getName()%></td>
+													</tr>
+													<tr>
+														<th>Email Id</th>
+														<td><%=u.getEmail()%></td>
+													</tr>
+													<tr>
+														<th>Contact no.</th>
+														<td><%=u.getPhoneNo()%></td>
+													</tr>
+													<tr>
+														<th>Name of organization</th>
+														<td><%=u.getOrgName()%></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<a href="editUserProfile.jsp?user_id="
+											" class="btn btn-primary" data-toggle="modal"
+											data-target="#editUserProfileModal"><i class="fa fa-edit"></i>
+											Edit</a>&nbsp&nbsp
+										<button type="button" class="btn btn-secondary"
+											data-dismiss="modal">
+											<i class="fa fa-close"></i> Close
+										</button>
+
+									</div>
+								</div>
 							</div>
-							<br>
-							<a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"
-			type="submit" data-toggle="modal" data-target="#userModal"><i
-			class="fa fa-user" aria-hidden="true"></i> <%=u1.getUserName()%></a>&nbsp&nbsp&nbsp
-		<a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"
-			type="submit"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+						</div>
 
+						<div class="modal-footer">
+							<a href="editUserProfile.jsp?" class="btn btn-primary"
+								data-toggle="modal" data-target="#editUserProfileModal"><i
+								class="fa fa-edit"></i> Edit</a>&nbsp&nbsp
+							<button type="button" class="btn btn-secondary"
+								data-dismiss="modal">
+								<i class="fa fa-close"></i> Close
+							</button>
 
-		<div class="modal fade" id="userModal" tabindex="-1" role="dialog"
-			aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<div class="modal-content">
-					<div class="modal-header">
-
-						<h5 class="modal-title" id="exampleModalLabel">Profile</h5>
-						<button type="button" class="close" data-dismiss="modal"
-							aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
-					</div>
-					<div class="modal-body">
-						<div class="container text-center">
-							<div class="text-danger">
-								<i class="fa fa-user-circle-o fa-4x" aria-hidden="true"></i>
-							</div>
-							<br>
-							<table class="table">
-								<tbody>
-									<tr>
-										<th>User Id</th>
-										<td><%=u1.getId()%></td>
-
-
-									</tr>
-									<tr>
-										<th>Username</th>
-										<td><%=u1.getUserName()%></td>
-									</tr>
-									<tr>
-										<th>Full Name</th>
-										<td><%=u1.getName()%></td>
-									</tr>
-									<tr>
-										<th>Email-Id</th>
-										<td><%=u1.getEmail()%></td>
-									</tr>
-									<tr>
-										<th>Qualification</th>
-										<td><%=u1.getQualification()%></td>
-									</tr>
-									<tr>
-										<th>Registered Timestamp</th>
-										<td><%=u1.getDate()%></td>
-									</tr>
-								</tbody>
-							</table>
 						</div>
 					</div>
-					<div class="modal-footer">
-					<a href="editUserProfile.jsp?user_id=<%=u1.getId()%>" class="btn btn-primary"
-								data-toggle="modal" data-target="#editUserProfileModal" ><i class="fa fa-edit"></i> Edit</a>&nbsp&nbsp
-						<button type="button" class="btn btn-secondary"
-							data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
-
-					</div>
 				</div>
 			</div>
 		</div>
-		
-					<div class="modal-footer">
-					<a href="editUserProfile.jsp?" class="btn btn-primary"
-								data-toggle="modal" data-target="#editUserProfileModal" ><i class="fa fa-edit"></i> Edit</a>&nbsp&nbsp
-						<button type="button" class="btn btn-secondary"
-							data-dismiss="modal"><i class="fa fa-close"></i> Close</button>
+	</div>
 
-					</div>
-				</div>
-			</div>
-		</div>
-		</div>
-		</div>
-		
 </body>
 </html>

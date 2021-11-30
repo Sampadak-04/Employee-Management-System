@@ -41,7 +41,7 @@
                             <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
                                 <ul class="navbar-nav m-auto">
                                     <li class="nav-item active">
-                                        <a class="page-scroll" href="#home"><span class="glyphicon glyphicon-plus"></span>&nbspCREATE RECORD</a>
+                                        <a class="page-scroll" href="AddEmployee.jsp"><span class="glyphicon glyphicon-plus"></span>&nbspCREATE RECORD</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#service"><span class="glyphicon glyphicon-search"></span>&nbspSEARCH RECORD</a>
@@ -53,7 +53,7 @@
                                         <a class="page-scroll" href="#contact"><span class="glyphicon glyphicon-trash"></span>&nbspDELETE RECORD</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#"><button class="btn btn-primary"><span class="glyphicon glyphicon-user">&nbspPROFILE</span></button></a>
+                                        <a class="page-scroll" href="Profile.jsp"><button class="btn btn-primary"><span class="glyphicon glyphicon-user">&nbspPROFILE</span></button></a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#"><button class="btn btn-danger"><span class="glyphicon glyphicon-off">&nbspLOGOUT</span></button></a>

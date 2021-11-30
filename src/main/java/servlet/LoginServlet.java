@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import DAO.ManagerDao;
 import model.Register;
@@ -27,6 +28,8 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("pass");
 		ManagerDao md = new ManagerDao();
 		Register r = md.validatUser(email, password);
+		HttpSession session = request.getSession();
+		session.setAttribute("User", r);
 		if(r!=null)
 		{
 			response.sendRedirect("Dashboard.jsp");
