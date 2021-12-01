@@ -2,7 +2,10 @@ package DAO;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.LinkedList;
+import java.util.List;
 
 import model.Employee;
 
@@ -28,6 +31,26 @@ public class EmployeeDao {
 			ex.printStackTrace();
 		}
 		return b;
+	}
+	public List<Employee> retrieveAll(int id)
+	{
+		con = MyConnection.getconnection();
+		Employee e = null;
+		List<Employee> elst = new LinkedList<Employee>();
+		try {
+			ps = con.prepareStatement("select * from employee where id = ?");
+			ps.setInt(1, id);
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				 e = new Employee(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getDouble(4));
+				 elst.add(e);
+			}
+		} catch (SQLException ex) {
+			// TODO Auto-generated catch block
+			ex.printStackTrace();
+		}
+		return elst;
 	}
 
 }

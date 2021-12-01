@@ -44,7 +44,7 @@
                                         <a class="page-scroll" href="AddEmployee.jsp"><span class="glyphicon glyphicon-plus"></span>&nbspCREATE RECORD</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#service"><span class="glyphicon glyphicon-search"></span>&nbspSEARCH RECORD</a>
+                                        <a class="page-scroll" href="RetrieveAll.jsp"><span class="glyphicon glyphicon-print"></span>&nbspRETRIEVE DATA</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#team"><span class="glyphicon glyphicon-edit"></span>&nbspUPDATE RECORD</a>
