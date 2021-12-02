@@ -51,9 +51,11 @@ public class RegisterServlet extends HttpServlet {
 			boolean b = md.register(r);
 			HttpSession sess = request.getSession();
 			sess.setAttribute("registration", b);
+			sess.setAttribute("emp-reg-success","Registration Successfully..");			
 			response.sendRedirect("Index.jsp");
 			// response.sendRedirect("Index.jsp");
-		} catch (Exception e) {
+		}
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

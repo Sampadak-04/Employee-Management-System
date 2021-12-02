@@ -18,6 +18,12 @@ crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
 crossorigin="anonymous"></script>
+<script src="sweetalert2.all.min.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="sweetalert2.all.min.js"></script>
 <style>
 #div1
 {
@@ -34,7 +40,38 @@ crossorigin="anonymous"></script>
       <div class="alert alert-warning text-center my-4">
         REGISTER HERE!!
       </div>
-      
+      <%
+			String msg = (String) session.getAttribute("emp-reg-success");
+			if (msg != null) {
+			%><script>
+			Swal.fire({
+		    		  title: "Done..!!",
+		    		  text: "Registration Successfully..",
+		    		  icon: 'success',
+		    		  confirmButtonColor: '#d33',
+		    		  //confirmButtonClass: "btn-danger",
+		    		  confirmButtonText: 'Okay!',
+		    		  closeOnConfirm: true
+		    		}
+		    	)
+		    	</script>
+			<%
+			}
+			session.removeAttribute("emp-reg-success");
+			%>
+			<%
+			String msg1 = (String) session.getAttribute("emp-reg-fail");
+			if (msg1 != null) {
+			%>
+
+			<div class="alert alert-danger alert-dismissible text-center">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<b><h5><%=msg1%></h5></b>
+			</div>
+			<%
+			}
+			session.removeAttribute("emp-reg-fail");
+			%>
       <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-8 col-xl-6">
           <div class="row">
