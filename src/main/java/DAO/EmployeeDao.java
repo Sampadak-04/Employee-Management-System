@@ -17,7 +17,7 @@ public class EmployeeDao {
 		boolean b = false;
 		con = MyConnection.getconnection();
 		try {
-			ps = con.prepareStatement("insert into employee values(?,?,?,?,?)");
+			ps = con.prepareStatement("insert into employe values(?,?,?,?,?)");
 			ps.setInt(1, e.getEmpId());
 			ps.setString(2, e.geteName());
 			ps.setString(3, e.getEmail());
@@ -38,7 +38,7 @@ public class EmployeeDao {
 		Employee e = null;
 		List<Employee> elst = new LinkedList<Employee>();
 		try {
-			ps = con.prepareStatement("select * from employee where id = ?");
+			ps = con.prepareStatement("select * from employe where id = ?");
 			ps.setInt(1, id);
 			ResultSet rs = ps.executeQuery();
 			while(rs.next())
@@ -51,6 +51,27 @@ public class EmployeeDao {
 			ex.printStackTrace();
 		}
 		return elst;
+	}
+	public boolean Update(String email,double salary,int empid,int id)
+	{
+		boolean b=false;
+		int i=0;
+		con=MyConnection.getconnection();
+		try {
+			ps=con.prepareStatement("update employe set Email=?,sal=? where empid=? and id=? ");
+			ps.setString(1, email);
+			ps.setDouble(2, salary);
+			ps.setInt(3,empid);
+			ps.setInt(4,id);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		if(i>0)
+		{
+			b=true;
+		}
+		return b;
 	}
 
 }

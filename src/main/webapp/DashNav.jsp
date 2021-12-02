@@ -47,7 +47,7 @@
                                         <a class="page-scroll" href="RetrieveAll.jsp"><span class="glyphicon glyphicon-print"></span>&nbspRETRIEVE DATA</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#team"><span class="glyphicon glyphicon-edit"></span>&nbspUPDATE RECORD</a>
+                                        <a class="page-scroll" href="Update.jsp"><span class="glyphicon glyphicon-edit"></span>&nbspUPDATE RECORD</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="page-scroll" href="#contact"><span class="glyphicon glyphicon-trash"></span>&nbspDELETE RECORD</a>
