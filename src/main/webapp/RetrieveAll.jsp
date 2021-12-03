@@ -31,6 +31,8 @@
          <th scope="row">Name</th>
          <th scope="row">Email</th>
          <th scope="row">Salary</th>
+         <th scope="row">Update</th>
+         <th scope="row">Delete</th>
       </tr>
    </thead>
    <%
@@ -46,6 +48,10 @@
          <td><%=emp.geteName() %></td>
          <td><%=emp.getEmail() %></td>
          <td><%=emp.getSalary() %></td>
+         <td><a href="Update.jsp?id=<%=emp.getEmpId()%>"><button class="btn btn-primary" style="font-size: 15px"><span class="glyphicon glyphicon-pencil"></span>&nbspUpdate</button></a>
+         </td>
+         <td><a href="DeleteServlet"><button class="btn btn-danger" style="font-size: 15px"><span class="glyphicon glyphicon-trash"></span>&nbspDelete</button></a>
+         </td>
       </tr>
    </tbody>
    <%

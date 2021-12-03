@@ -19,41 +19,26 @@ import model.Register;
 @WebServlet("/UpdateEmployeeServlet")
 public class UpdateEmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+  
     public UpdateEmployeeServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int id;
-		String email;
-		double sal;
-		HttpSession session;
-		Register r;
 		try {
-			id = Integer.parseInt(request.getParameter(("id")));
-			String ename=request.getParameter("ename");
-			email = request.getParameter("eemail");
-			sal = Double.parseDouble(request.getParameter("esal"));
-			session = request.getSession();
-			r = (Register) session.getAttribute("User");
+			int empid = Integer.parseInt(request.getParameter("eid"));
+			String email = request.getParameter("eemail");
+			double sal = Double.parseDouble(request.getParameter("esal"));
+			HttpSession session = request.getSession();
+			Register r = (Register) session.getAttribute("User");
 			EmployeeDao edao=new EmployeeDao();
-			boolean b=edao.Update(email, sal,r.getId(), id);
+			boolean b=edao.Update(email, sal, empid, r.getId());
 			if(b)
 			{
-			     session=request.getSession();
-				response.sendRedirect("Update.jsp");
+				response.sendRedirect("Dashboard.jsp");
 			}
 			else
 			{
-				 session=request.getSession();
 				response.sendRedirect("Update.jsp");
 			}
 		  } 

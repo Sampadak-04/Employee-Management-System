@@ -18,11 +18,11 @@ import model.Register;
 @WebServlet("/AddEmployeeServlet")
 public class AddEmployeeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
- 
-    public AddEmployeeServlet() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
+
+	public AddEmployeeServlet() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int empId = 0;
 		ArrayList<Integer> list = new ArrayList<Integer>();
@@ -43,7 +43,9 @@ public class AddEmployeeServlet extends HttpServlet {
 		EmployeeDao ed = new EmployeeDao();
 		boolean b = ed.register(e, userId);
 		if(b)
+		{
 			response.sendRedirect("Dashboard.jsp");
+		}
 		else
 			response.sendRedirect("AddEmployee.jsp");
 	}
