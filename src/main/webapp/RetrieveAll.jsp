@@ -50,7 +50,7 @@
          <td><%=emp.getSalary() %></td>
          <td><a href="Update.jsp?id=<%=emp.getEmpId()%>"><button class="btn btn-primary" style="font-size: 15px"><span class="glyphicon glyphicon-pencil"></span>&nbspUpdate</button></a>
          </td>
-         <td><a href="DeleteServlet"><button class="btn btn-danger" style="font-size: 15px"><span class="glyphicon glyphicon-trash"></span>&nbspDelete</button></a>
+         <td><a href="DeleteServlet?id=<%=emp.getEmpId()%>"><button class="btn btn-danger" style="font-size: 15px"><span class="glyphicon glyphicon-trash"></span>&nbspDelete</button></a>
          </td>
       </tr>
    </tbody>

@@ -90,4 +90,21 @@ public class EmployeeDao {
 		}
 		return b;
 	}
+	public boolean deleteEmployee(int empid, int userId)
+	{
+		boolean b = false;
+		con = MyConnection.getconnection();
+		try {
+			ps = con.prepareStatement("delete from employee where empid =? and id = ?");
+			ps.setInt(1, empid);
+			ps.setInt(2, userId);
+			int i = ps.executeUpdate();
+			if(i>0)
+				b = true;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return b;
+	}
 }
