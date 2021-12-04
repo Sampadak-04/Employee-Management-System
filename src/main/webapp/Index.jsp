@@ -46,8 +46,8 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="section-title pb-10">
-                        <h4 class="title">Crafted For</h4>
-                        <p class="text">Stop wasting time and money designing and managing a website that doesn't get results. Happiness guaranteed!</p>
+                        <h4 class="title">Services Offered</h4>
+                        <p class="text">Services offered by our system!</p>
                     </div> <!-- section title -->
                 </div>
             </div> <!-- row -->
@@ -60,8 +60,8 @@
                                     <i class="lni-bolt"></i>
                                 </div>
                                 <div class="services-content media-body">
-                                    <h4 class="services-title">Startup</h4>
-                                    <p class="text">Short description for the ones</br> who look for something new.</p>
+                                    <h4 class="services-title">Running a Smooth Orginzation</h4>
+                                    <p class="text">It procides services</br>especially orgganization of Scale</p>
                                 </div>
                             </div> <!-- services content -->
                         </div>
@@ -71,8 +71,8 @@
                                     <i class="lni-bar-chart"></i>
                                 </div>
                                 <div class="services-content media-body">
-                                    <h4 class="services-title">SaaS Business</h4>
-                                    <p class="text">Short description for the ones</br> who look for something new.</p>
+                                    <h4 class="services-title">Helps Hr Personnel</h4>
+                                    <p class="text">It assists Hr Personnel to </br>keep track of employee information</p>
                                 </div>
                             </div> <!-- services content -->
                         </div>
@@ -82,8 +82,8 @@
                                     <i class="lni-brush"></i>
                                 </div>
                                 <div class="services-content media-body">
-                                    <h4 class="services-title">Agency</h4>
-                                    <p class="text">Short description for the ones</br> who look for something new.</p>
+                                    <h4 class="services-title">Time saving</h4>
+                                    <p class="text">It helps to save time</br>for searchging employee details</p>
                                 </div>
                             </div> <!-- services content -->
                         </div>
@@ -93,8 +93,8 @@
                                     <i class="lni-bulb"></i>
                                 </div>
                                 <div class="services-content media-body">
-                                    <h4 class="services-title">App Landing</h4>
-                                    <p class="text">Short description for the ones</br> who look for something new.</p>
+                                    <h4 class="services-title">Reteriving And Updation</h4>
+                                    <p class="text">Easy to changes employee data</br>and also delete employes</p>
                                 </div>
                             </div> <!-- services content -->
                         </div>
@@ -253,20 +253,15 @@
                                 <div class="col-md-12">
                                     <div class="single-form form-group text-center">
                                         <button type="submit" class="main-btn">send message</button>
-                                    </div> <!-- single form -->
+                                    </div> 
                                 </div>
-                            </div> <!-- row -->
+                            </div> 
                         </form>
-                    </div> <!-- row -->
+                    </div> 
                 </div>
-            </div> <!-- row -->
-        </div> <!-- conteiner -->
+            </div> 
+        </div>
     </section>
-
-    <!--====== CONTACT PART ENDS ======-->
-
-    <!--====== FOOTER PART START ======-->
-
     <footer id="footer" class="footer-area">
         <div class="footer-widget">
             <div class="container">
@@ -340,7 +335,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="copyright text-center">
-                            <p class="text">Template Crafted by <a rel="nofollow" href="https://uideck.com">UIdeck</a> - UI Powered by <a el="nofollow" href="https://rebrand.ly/ayroui">AyroUI</a></p>
+                            <p class="text">Rights : | Employee Management System | </p>
                         </div>
                     </div>
                 </div> <!-- row -->

@@ -72,11 +72,11 @@
                                     <li><a href="#"><i class="lni-linkedin-original"></i></a></li>                                  
                                 </ul>
                             </div>
-                        </nav> <!-- navbar -->
+                        </nav> 
                     </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- navgition -->
+                </div> 
+            </div> 
+        </div> 
 
 </body>
 </html>

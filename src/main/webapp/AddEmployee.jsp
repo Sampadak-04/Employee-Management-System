@@ -29,74 +29,48 @@
 
 .card {
 	background-color: tomato;
+	margin-top:200px;
+	width:500px;
+
+}
+.form-label
+{
+   width:100px;
+   height:30px;
 }
 </style>
 <%@ include file="DashNav.jsp"%>
 </head>
 <body>
-	<div class="card"
-		style="margin-left: 420px; width: 600px; height: 380px; margin-top: 100px;">
-		<form class="well form-horizontal" action="AddEmployeeServlet" method="post"
-			id="contact_form">
-
-			<center>
-				<h2 style="margin-left: 10px;">
-					<b>Add Employee</b>
-				</h2>
-			</center>
-			<fieldset>
-				<div class="form-group" style="margin-top: 200px;">
-					<label class="col-md-4 control-label">Name</label>
-					<div class="col-md-4 inputGroupContainer">
-						<div class="input-group">
-							<span class="input-group-addon"><i
-								class="glyphicon glyphicon-user"></i></span> <input name="ename"
-								placeholder="Employee Name" class="form-control" type="text">
-						</div>
+<body class="hold-transition sidebar-mini layout-fixed">
+	<div class="container" align="center">
+		<div class="card">
+			<div class="card-header">
+				<h3 style="color: blue;">Add Employee</h3>
+			</div>
+			<div class="card-body">
+				<form action="AddEmployeeServlet" method="post">
+					<!-- Password input -->
+					<div class="form-outline mb-4">
+						<label class="form-label" for="form1Example2">Employee
+							Name : &nbsp&nbsp </label> <input type="text" id="form1Example2"
+							name="ename"  required  style="height:25px;width:200px;"/>
 					</div>
-				</div>
-				<div class="form-group">
-					<label class="col-md-4 control-label">E-Mail</label>
-					<div class="col-md-4 inputGroupContainer">
-						<div class="input-group">
-							<span class="input-group-addon"><i
-								class="glyphicon glyphicon-envelope"></i></span> <input name="email"
-								placeholder="E-Mail Address" class="form-control" type="text">
-						</div>
+					<div class="form-outline mb-4">
+						<label class="form-label" for="form1Example2">Employee
+							Email : &nbsp&nbsp</label> <input type="text" id="form1Example2"
+							name="email"  required  style="height:25px;width:200px;" />
 					</div>
-				</div>
-
-				<div class="form-group">
-					<label class="col-md-4 control-label">SALARY</label>
-					<div class="col-md-4 inputGroupContainer">
-						<div class="input-group">
-							<span class="input-group-addon"><i
-								class="glyphicon glyphicon-envelope"></i></span> <input name="salary"
-								placeholder="SALARY" class="form-control" type="number">
-						</div>
+					<div class="form-outline mb-4">
+						<label class="form-label" for="form1Example2">Employee
+							Salary : &nbsp&nbsp</label> <input type="number" id="form1Example2"
+							name="salary" required  style="height:25px;width:200px;"/>
 					</div>
-				</div>
-
-				<div class="alert alert-success" role="alert" id="success_message">
-					Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.
-				</div>
-
-				<!-- Button -->
-				<div class="form-group">
-					<label class="col-md-4 control-label"></label>
-					<div class="col-md-4">
-						<br>
-						&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-						<button type="submit" class="btn btn-primary">
-							ADD&nbsp&nbsp&nbsp<span
-								class="glyphicon glyphicon-plus" style="color: white;"></span>
-						</button>
-					</div>
-				</div>
-			</fieldset>
-		</form>
+					<!-- Submit button -->
+					<button type="submit" class="btn btn-primary" style="height:35px;width:100px;">Add</button>
+				</form>
+			</div>
+		</div>
 	</div>
-	<!-- /.container -->
-
 </body>
 </html>
