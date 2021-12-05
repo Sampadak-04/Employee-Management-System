@@ -22,6 +22,10 @@
 	src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 	integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 	crossorigin="anonymous"></script>
+<script src="sweetalert2.all.min.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <style>
 #success_message {
 	display: none;
@@ -38,10 +42,37 @@
    width:100px;
    height:30px;
 }
+body
+{
+	background-image: url("images/dashBg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 </style>
 <%@ include file="DashNav.jsp"%>
 </head>
 <body>
+<%
+	try {
+		boolean b = (boolean) session.getAttribute("add-success");
+		if (!b) {
+	%>
+	<div>
+	<script>
+		Swal.fire({
+			icon : 'error',
+			title : 'Oops...',
+			text : 'Something went wrong..Please try again..!',
+		})
+	</script>
+	</div>
+	<%
+	}
+	} catch (Exception e) {
+	// e.printStackTrace();
+	}
+	session.removeAttribute("add-success");
+	%>
 <body class="hold-transition sidebar-mini layout-fixed">
 	<div class="container" align="center">
 		<div class="card">

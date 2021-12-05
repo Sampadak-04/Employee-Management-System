@@ -9,8 +9,110 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="sweetalert2.all.min.js"></script>
+	<script src="sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="sweetalert2.min.css">
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+body
+{
+	background-image: url("images/dashBg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+</style>
+<script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+</script>
 </head>
 <body>
+<%
+	try {
+		boolean b = (boolean) session.getAttribute("login-success");
+		if (b==true) {
+	%>
+	<div>
+	<script>
+		Swal.fire({
+			icon : 'success',
+			title : 'Congrats..!!',
+			text : 'Logged in successfully..',
+		})
+	</script>
+	</div>
+	<%
+	}
+	} catch (Exception e) {
+	// e.printStackTrace();
+	}
+	session.removeAttribute("login-success");
+	%>
+	<%
+	try {
+		boolean b = (boolean) session.getAttribute("add-success");
+		if (b==true) {
+	%>
+	<div>
+	<script>
+		Swal.fire({
+			icon : 'success',
+			title : 'Congrats..!!',
+			text : 'Employee added successfully...!',
+		})
+	</script>
+	</div>
+	<%
+	}
+	} catch (Exception e) {
+	// e.printStackTrace();
+	}
+	session.removeAttribute("add-success");
+	%>
+	<%
+	try {
+		boolean b = (boolean) session.getAttribute("update-success");
+		if (b==true) {
+	%>
+	<div>
+	<script>
+		Swal.fire({
+			icon : 'success',
+			title : 'Congrats..!!',
+			text : 'Employee updated successfully...!',
+		})
+	</script>
+	</div>
+	<%
+	}
+	} catch (Exception e) {
+	// e.printStackTrace();
+	}
+	session.removeAttribute("update-success");
+	%>
+	<%
+	try {
+		boolean b = (boolean) session.getAttribute("deleted");
+		if (b==true) {
+	%>
+	<div>
+	<script>
+		Swal.fire({
+			icon : 'success',
+			title : 'Congrats..!!',
+			text : 'Employee deleted successfully...!',
+		})
+	</script>
+	</div>
+	<%
+	}
+	} catch (Exception e) {
+	// e.printStackTrace();
+	}
+	session.removeAttribute("deleted");
+	%>
 <%@include file="DashNav.jsp" %>
 </body>
 </html>

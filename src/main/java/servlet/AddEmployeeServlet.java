@@ -44,10 +44,14 @@ public class AddEmployeeServlet extends HttpServlet {
 		boolean b = ed.register(e, userId);
 		if(b)
 		{
+			sess.setAttribute("add-success", true);
 			response.sendRedirect("Dashboard.jsp");
 		}
 		else
+		{
+			sess.setAttribute("add-success", false);
 			response.sendRedirect("AddEmployee.jsp");
+		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

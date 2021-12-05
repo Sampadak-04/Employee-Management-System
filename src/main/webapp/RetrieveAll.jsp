@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="sweetalert2.all.min.js"></script>
+	<script src="sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="sweetalert2.min.css">
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <title>EMS | Retrieve all</title>
 <style>
 #table1
@@ -19,6 +23,27 @@
 	font-size: 20px;
 }
 </style>
+<%
+	try {
+		boolean b = (boolean) session.getAttribute("deleted");
+		if (!b) {
+	%>
+	<div>
+	<script>
+		Swal.fire({
+			icon : 'error',
+			title : 'Oops...',
+			text : 'Something went wrong..Please try again..!',
+		})
+	</script>
+	</div>
+	<%
+	}
+	} catch (Exception e) {
+	// e.printStackTrace();
+	}
+	session.removeAttribute("deleted");
+	%>
 <%@include file="Dashboard.jsp" %>
 </head>
 <body>

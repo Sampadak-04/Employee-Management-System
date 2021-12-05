@@ -60,8 +60,8 @@
                                     <i class="lni-bolt"></i>
                                 </div>
                                 <div class="services-content media-body">
-                                    <h4 class="services-title">Running a Smooth Orginzation</h4>
-                                    <p class="text">It procides services</br>especially orgganization of Scale</p>
+                                    <h4 class="services-title">Running a Smooth Organization</h4>
+                                    <p class="text">It provides information access services especially for organizations of large Scale</p>
                                 </div>
                             </div> <!-- services content -->
                         </div>
@@ -71,8 +71,8 @@
                                     <i class="lni-bar-chart"></i>
                                 </div>
                                 <div class="services-content media-body">
-                                    <h4 class="services-title">Helps Hr Personnel</h4>
-                                    <p class="text">It assists Hr Personnel to </br>keep track of employee information</p>
+                                    <h4 class="services-title">Helps HR Personnel</h4>
+                                    <p class="text">It assists HR Personnel to <br>keep track of employee information</p>
                                 </div>
                             </div> <!-- services content -->
                         </div>
@@ -83,7 +83,7 @@
                                 </div>
                                 <div class="services-content media-body">
                                     <h4 class="services-title">Time saving</h4>
-                                    <p class="text">It helps to save time</br>for searchging employee details</p>
+                                    <p class="text">It helps to save time<br>for searching employee details</p>
                                 </div>
                             </div> <!-- services content -->
                         </div>
@@ -94,7 +94,7 @@
                                 </div>
                                 <div class="services-content media-body">
                                     <h4 class="services-title">Reteriving And Updation</h4>
-                                    <p class="text">Easy to changes employee data</br>and also delete employes</p>
+                                    <p class="text">Easy to update, retrieve and<br>delete employee data</p>
                                 </div>
                             </div> <!-- services content -->
                         </div>

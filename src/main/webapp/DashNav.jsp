@@ -18,6 +18,12 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script type="text/javascript">
+        window.history.forward();
+        function noBack() {
+            window.history.forward();
+        }
+</script>
 </head>
 <body>
  <!--====== HEADER PART START ======-->
@@ -26,12 +32,13 @@
         <div class="navgition navgition-transparent">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-13">
                         <nav class="navbar navbar-expand-lg">
+                        	<h4>Employee Management System</h4>
                             <a class="navbar-brand" href="#">
                                 <img src="assets/images/logo.svg" alt="Logo">
                             </a>
-
+							
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne" aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
                                 <span class="toggler-icon"></span>
                                 <span class="toggler-icon"></span>
@@ -47,16 +54,10 @@
                                         <a class="page-scroll" href="RetrieveAll.jsp"><span class="glyphicon glyphicon-print"></span>&nbspRETRIEVE DATA</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="Update.jsp"><span class="glyphicon glyphicon-edit"></span>&nbspUPDATE RECORD</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="page-scroll" href="#contact"><span class="glyphicon glyphicon-trash"></span>&nbspDELETE RECORD</a>
-                                    </li>
-                                    <li class="nav-item">
                                         <a class="page-scroll" href="Profile.jsp"><button class="btn btn-primary"><span class="glyphicon glyphicon-user">&nbspPROFILE</span></button></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="page-scroll" href="#"><button class="btn btn-danger"><span class="glyphicon glyphicon-off">&nbspLOGOUT</span></button></a>
+                                        <a href="Login.jsp"><button class="btn btn-danger"><span class="glyphicon glyphicon-off">&nbspLOGOUT</span></button></a>
                                     </li>
                                 </ul>
                             </div>
@@ -64,7 +65,7 @@
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
-        </div> <!-- navgition -->
+        </div> <!-- navigation -->
 
 </body>
 </html>

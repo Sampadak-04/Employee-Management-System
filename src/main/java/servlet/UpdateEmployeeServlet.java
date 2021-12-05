@@ -35,10 +35,12 @@ public class UpdateEmployeeServlet extends HttpServlet {
 			boolean b=edao.Update(email, sal, empid, r.getId());
 			if(b)
 			{
+				session.setAttribute("update-success", true);
 				response.sendRedirect("Dashboard.jsp");
 			}
 			else
 			{
+				session.setAttribute("update-success", false);
 				response.sendRedirect("Update.jsp");
 			}
 		  } 

@@ -32,10 +32,12 @@ public class LoginServlet extends HttpServlet {
 		session.setAttribute("User", r);
 		if(r!=null)
 		{
+			session.setAttribute("login-success", true);		
 			response.sendRedirect("Dashboard.jsp");
 		}
 		else
 		{
+			session.setAttribute("login-success", false);	
 			response.sendRedirect("Login.jsp");
 		}
 	}

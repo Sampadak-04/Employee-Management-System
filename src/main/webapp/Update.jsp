@@ -28,6 +28,10 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
+<script src="sweetalert2.all.min.js"></script>
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <title>EMS | Update</title>
 <style>
 #table1 {
@@ -45,9 +49,29 @@ h3 {
 	color: blue;
 }
 </style>
+<%
+	try {
+		boolean b = (boolean) session.getAttribute("update-success");
+		if (!b) {
+	%>
+	<div>
+	<script>
+		Swal.fire({
+			icon : 'error',
+			title : 'Oops...',
+			text : 'Something went wrong..Please try again..!',
+		})
+	</script>
+	</div>
+	<%
+	}
+	} catch (Exception e) {
+	// e.printStackTrace();
+	}
+	session.removeAttribute("update-success");
+	%>
 <%@include file="Dashboard.jsp"%>
 </head>
-<body>
 <body class="hold-transition sidebar-mini layout-fixed">
 	<%
 	int empid = Integer.parseInt(request.getParameter("id"));

@@ -27,11 +27,15 @@ public class DeleteServlet extends HttpServlet {
 		EmployeeDao ed = new EmployeeDao();
 		boolean b = ed.deleteEmployee(empid, r.getId());
 		if(b)
+		{	
+			sess.setAttribute("deleted", true);
 			response.sendRedirect("Dashboard.jsp");
-		else
+		}
+		else {
+			sess.setAttribute("deleted", false);
 			response.sendRedirect("RetrieveAll.jsp");
+		}
 	}
-
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
