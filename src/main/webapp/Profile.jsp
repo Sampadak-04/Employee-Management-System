@@ -40,6 +40,14 @@ if (session.getAttribute("token") == null) {
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<%
+	ServletContext sc2=request.getServletContext();
+    Register r = (Register) session.getAttribute("User");
+	if(r==null){
+		session.setAttribute("pls-login", "Please Login Here...");
+		response.sendRedirect("Login.jsp");
+	}
+	%>
 </head>
 <body>
 	<a href="LogoutServlet" class="btn btn-light my-2 my-sm-0"

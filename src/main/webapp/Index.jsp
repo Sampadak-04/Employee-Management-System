@@ -5,6 +5,20 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>EMS | Index</title>
+<SCRIPT type="text/javascript">
+    window.history.forward();
+    function noBack() { window.history.forward(); }
+</SCRIPT>
+<%
+response.setHeader("Cache-Control", "no-cache");
+response.setHeader("Cache-Control", "no-store");
+response.setHeader("Pragma", "no-cache");
+response.setDateHeader("Expires", 0);
+if (session.getAttribute("token") == null) {
+	//response.sendRedirect(request.getContextPath() + "/LogOut.jsp");
+
+}
+%>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="">
@@ -16,7 +30,8 @@
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body  onload="noBack();" onpageshow="if (event.persisted) noBack();"
+	onunload="">
  <%@ include file="HomeNav.jsp" %>
 
         <div id="home" class="header-hero bg_cover" style="background-image: url(images/bg_reg.jpg)">

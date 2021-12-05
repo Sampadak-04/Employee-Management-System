@@ -1,3 +1,4 @@
+<%@page import="model.Register"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<<<<<<< Updated upstream
 	<script src="sweetalert2.all.min.js"></script>
 	<script src="sweetalert2.min.js"></script>
 	<link rel="stylesheet" href="sweetalert2.min.css">
@@ -113,6 +115,14 @@ body
 	}
 	session.removeAttribute("deleted");
 	%>
+=======
+    <style>
+    
+ </style>
+</head>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();"
+	onunload="">
+>>>>>>> Stashed changes
 <%@include file="DashNav.jsp" %>
 </body>
 </html>

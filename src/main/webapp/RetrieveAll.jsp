@@ -61,7 +61,7 @@
       </tr>
    </thead>
    <%
-   		Register r = (Register) session.getAttribute("User");
+        Register r = (Register) session.getAttribute("User");
    		EmployeeDao edao = new EmployeeDao();
    		List<Employee> lst = edao.retrieveAll(r.getId());
    		for(Employee emp : lst)

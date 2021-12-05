@@ -27,7 +27,8 @@
     <!--====== Style css ======-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();"
+	onunload="">
  <!--====== HEADER PART START ======-->
 
     <header class="header-area">

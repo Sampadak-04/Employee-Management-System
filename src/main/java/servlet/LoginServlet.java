@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
 		Register r = md.validatUser(email, password);
 		HttpSession session = request.getSession();
 		session.setAttribute("User", r);
+		session.setAttribute("pls-login", r);
 		if(r!=null)
 		{
 			session.setAttribute("login-success", true);		

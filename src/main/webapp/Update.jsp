@@ -33,6 +33,7 @@
 <link rel="stylesheet" href="sweetalert2.min.css">
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <title>EMS | Update</title>
+
 <style>
 #table1 {
 	font-size: 20px;

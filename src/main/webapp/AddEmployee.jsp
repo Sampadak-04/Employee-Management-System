@@ -1,3 +1,4 @@
+<%@page import="model.Register"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -7,6 +8,14 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EMS | Add Employee</title>
+<%
+	ServletContext sc2=request.getServletContext();
+    Register r = (Register) session.getAttribute("User");
+	if(r==null){
+		session.setAttribute("pls-login", "Please Login Here...");
+		response.sendRedirect("Login.jsp");
+	}
+	%>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
