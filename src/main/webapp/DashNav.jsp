@@ -18,18 +18,16 @@
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
-<<<<<<< Updated upstream
-    <script type="text/javascript">
+<script type="text/javascript">
         window.history.forward();
         function noBack() {
             window.history.forward();
         }
 </script>
-=======
-    <style>
+<style>
    
  </style>
->>>>>>> Stashed changes
+
 </head>
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();"
 	onunload="">
@@ -68,7 +66,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </nav> <!-- navbar -->
+                        </nav> 
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
