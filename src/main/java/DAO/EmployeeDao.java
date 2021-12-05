@@ -17,7 +17,7 @@ public class EmployeeDao {
 		boolean b = false;
 		con = MyConnection.getconnection();
 		try {
-			ps = con.prepareStatement("insert into employee values(?,?,?,?,?)");
+			ps = con.prepareStatement("insert into employe values(?,?,?,?,?)");
 			ps.setInt(1, e.getEmpId());
 			ps.setString(2, e.geteName());
 			ps.setString(3, e.getEmail());

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
   <script src="sweetalert2.all.min.js"></script>
 	<script src="sweetalert2.min.js"></script>
 	<link rel="stylesheet" href="sweetalert2.min.css">
@@ -17,9 +18,10 @@
 <style>
 body
 {
-	background-image: url("images/dashBg.png");
+    background-image: url("images/dash2.png");
 	background-repeat: no-repeat;
 	background-size: cover;
+	
 }
 </style>
 <script type="text/javascript">
@@ -114,14 +116,19 @@ body
 	}
 	session.removeAttribute("deleted");
 	%>
-=======
+
     <style>
     
  </style>
 </head>
 <body onload="noBack();" onpageshow="if (event.persisted) noBack();"
 	onunload="">
->>>>>>> Stashed changes
+    <style>
+    
+ </style>
+</head>
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();"
+	onunload="">
 <%@include file="DashNav.jsp" %>
 </body>
 </html>
