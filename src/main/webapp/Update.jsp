@@ -8,17 +8,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<%
-try {
-	Register r = (Register) session.getAttribute("User");
-	if (r == null) {
-		session.setAttribute("not-login", true);
-		response.sendRedirect("Login.jsp");
-	}
-} catch (Exception e) {
-	// e.printStackTrace();
-}
-%>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -44,7 +33,6 @@ try {
 <link rel="stylesheet" href="sweetalert2.min.css">
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <title>EMS | Update</title>
-
 <style>
 #table1 {
 	font-size: 20px;
