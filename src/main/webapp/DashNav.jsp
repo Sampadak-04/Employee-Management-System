@@ -1,9 +1,21 @@
+<%@page import="model.Register"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<%
+try {
+	Register r = (Register) session.getAttribute("User");
+	if (r == null) {
+		session.setAttribute("not-login", true);
+		response.sendRedirect("Login.jsp");
+	}
+} catch (Exception e) {
+	// e.printStackTrace();
+}
+%>
 <!--====== Required meta tags ======-->
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">

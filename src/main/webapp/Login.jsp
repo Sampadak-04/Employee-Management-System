@@ -25,15 +25,21 @@
 	href="assets/js/vendor/daterangepicker/daterangepicker.css">
 <link rel="stylesheet" type="text/css" href="assets/css/util.css">
 <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script src="sweetalert2.all.min.js"></script>
 <script src="sweetalert2.min.js"></script>
 <link rel="stylesheet" href="sweetalert2.min.css">
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
-        window.history.forward();
-        function noBack() {
-            window.history.forward();
-        }
+	window.history.forward();
+	function noBack() {
+		window.history.forward();
+	}
 </script>
 </head>
 <body style="background-color: #666666;">
@@ -43,13 +49,29 @@
 		if (!b) {
 	%>
 	<div>
-	<script>
-		Swal.fire({
-			icon : 'error',
-			title : 'Oops...',
-			text : 'Invalid credentials..!',
-		})
-	</script>
+		<script>
+			Swal.fire({
+				icon : 'error',
+				title : 'Oops...',
+				text : 'Invalid credentials..!',
+			})
+		</script>
+	</div>
+	<%
+	}
+	} catch (Exception e) {
+	// e.printStackTrace();
+	}
+	session.removeAttribute("login-success");
+	%>
+	<%
+	try {
+		boolean b = (boolean) session.getAttribute("not-login");
+		if (b) {
+	%>
+	<div class="alert alert-danger alert-dismissible fade in">
+		<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		<strong>Oops!</strong> Login here first...!
 	</div>
 	<%
 	}
@@ -94,8 +116,11 @@
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">Login</button>
+					</div><br><br>
+					<div align="center">
+					<a href="Index.jsp"><button type="button" class="btn btn-info">Back
+								to Home</button></a>
 					</div>
-
 					<div class="text-center p-t-46 p-b-20">
 						<span class="txt2"> or sign up using </span>
 					</div>
@@ -124,5 +149,5 @@
 	<script src="assets/js/vendor/countdowntime/countdowntime.js"></script>
 	<script src="assets/js/main1.js"></script>
 </body>
- 
+
 </html>

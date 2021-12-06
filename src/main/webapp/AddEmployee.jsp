@@ -8,6 +8,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EMS | Add Employee</title>
+<%
+try {
+	Register r = (Register) session.getAttribute("User");
+	if (r == null) {
+		session.setAttribute("not-login", true);
+		response.sendRedirect("Login.jsp");
+	}
+} catch (Exception e) {
+	// e.printStackTrace();
+}
+%>
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -34,18 +45,17 @@
 
 .card {
 	background-color: tomato;
-	margin-top:200px;
-	width:500px;
+	margin-top: 200px;
+	width: 500px;
+}
 
+.form-label {
+	width: 100px;
+	height: 30px;
 }
-.form-label
-{
-   width:100px;
-   height:30px;
-}
-body
-{
-	background-image: url("images/dash2.png");
+
+body {
+	background-image: url("images/dash2.jpeg");
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -53,19 +63,19 @@ body
 <%@ include file="DashNav.jsp"%>
 </head>
 <body>
-<%
+	<%
 	try {
 		boolean b = (boolean) session.getAttribute("add-success");
 		if (!b) {
 	%>
 	<div>
-	<script>
-		Swal.fire({
-			icon : 'error',
-			title : 'Oops...',
-			text : 'Something went wrong..Please try again..!',
-		})
-	</script>
+		<script>
+			Swal.fire({
+				icon : 'error',
+				title : 'Oops...',
+				text : 'Something went wrong..Please try again..!',
+			})
+		</script>
 	</div>
 	<%
 	}
@@ -74,9 +84,10 @@ body
 	}
 	session.removeAttribute("add-success");
 	%>
+
 <body class="hold-transition sidebar-mini layout-fixed">
 	<div class="container" align="center">
-		<div class="card">
+		<div class="card" style="opacity: 90%;">
 			<div class="card-header">
 				<h3 style="color: blue;">Add Employee</h3>
 			</div>
@@ -86,20 +97,21 @@ body
 					<div class="form-outline mb-4">
 						<label class="form-label" for="form1Example2">Employee
 							Name : &nbsp&nbsp </label> <input type="text" id="form1Example2"
-							name="ename"  required  style="height:25px;width:200px;"/>
+							name="ename" required style="height: 25px; width: 200px;" />
 					</div>
 					<div class="form-outline mb-4">
 						<label class="form-label" for="form1Example2">Employee
 							Email : &nbsp&nbsp</label> <input type="text" id="form1Example2"
-							name="email"  required  style="height:25px;width:200px;" />
+							name="email" required style="height: 25px; width: 200px;" />
 					</div>
 					<div class="form-outline mb-4">
 						<label class="form-label" for="form1Example2">Employee
 							Salary : &nbsp&nbsp</label> <input type="number" id="form1Example2"
-							name="salary" required  style="height:25px;width:200px;"/>
+							name="salary" required style="height: 25px; width: 200px;" />
 					</div>
 					<!-- Submit button -->
-					<button type="submit" class="btn btn-primary" style="height:35px;width:100px;">Add</button>
+					<button type="submit" class="btn btn-primary"
+						style="height: 35px; width: 100px;">Add</button>
 				</form>
 			</div>
 		</div>

@@ -3,6 +3,17 @@
 	pageEncoding="ISO-8859-1"%>
 <html>
 <head>
+<%
+try {
+	Register r = (Register) session.getAttribute("User");
+	if (r == null) {
+		session.setAttribute("not-login", true);
+		response.sendRedirect("Login.jsp");
+	}
+} catch (Exception e) {
+	// e.printStackTrace();
+}
+%>
 <SCRIPT type="text/javascript">
 	window.history.forward();
 	function noBack() {

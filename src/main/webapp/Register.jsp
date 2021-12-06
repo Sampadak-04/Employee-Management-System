@@ -110,8 +110,9 @@ crossorigin="anonymous"></script>
                   I Read and Accept <a href="https://www.froala.com">Terms and Conditions</a>
                 </label>
               </div>
-              <button type="submit" class="btn btn-primary mt-4" style="margin-left:200px;">Sign Up</button>
-              <br><br>
+              <button type="submit" class="btn btn-primary mt-4" style="margin-left:200px;">Sign Up</button>&nbsp&nbsp
+              <a href="Index.jsp"><button type="button" class="btn btn-info mt-4">Back to Home</button>
+              </a><br><br>
             </div>
           </div>
         </div>

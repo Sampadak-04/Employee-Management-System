@@ -10,7 +10,7 @@ public class MyConnection {
 		Connection con = null;
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
-			con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","12345678");
+			con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","system","sampada04");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
