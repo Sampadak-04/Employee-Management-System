@@ -46,7 +46,7 @@
 	}
 	session.removeAttribute("deleted");
 	%>
-<%@include file="Dashboard.jsp"%>
+<%@include file="DashNav.jsp"%>
 </head>
 <body>
 	<br>
@@ -70,9 +70,9 @@
 			</tr>
 		</thead>
 		<%
-        Register r = (Register) session.getAttribute("User");
+        Register rg = (Register) session.getAttribute("User");
    		EmployeeDao edao = new EmployeeDao();
-   		List<Employee> lst = edao.retrieveAll(r.getId());
+   		List<Employee> lst = edao.retrieveAll(rg.getId());
    		for(Employee emp : lst)
    		{
    %>

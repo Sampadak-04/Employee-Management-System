@@ -30,6 +30,10 @@ try {
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/default.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="sweetalert2.all.min.js"></script>
+	<script src="sweetalert2.min.js"></script>
+	<link rel="stylesheet" href="sweetalert2.min.css">
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script type="text/javascript">
         window.history.forward();
         function noBack() {
@@ -73,15 +77,31 @@ try {
                                         <a class="page-scroll" href="Profile.jsp"><button class="btn btn-primary"><span class="glyphicon glyphicon-user">&nbspPROFILE</span></button></a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="Login.jsp"><button class="btn btn-danger"><span class="glyphicon glyphicon-off">&nbspLOGOUT</span></button></a>
-                                    </li>
+                                        <a class="page=scroll"><button class="btn btn-danger" onclick="logout()"><span class="glyphicon glyphicon-off">&nbspLOGOUT</span></button>
+                                    </a></li>
                                 </ul>
                             </div>
+                            <script>
+                            	function logout()
+                            	{
+                            		swal.fire({
+                            			title: "Are you sure to logout?",
+                            			text: "Yes or no?",
+                            			type: "info",
+                            			focusConfirm: true,
+                            			confirmButtonColor: "#DD6B55",
+                            			confirmButtonText: "Yes",
+                            			showCloseButton: true,
+                            		}).then((result)=> {
+                            			if(result.isConfirmed)
+                            		    window.location = "http://localhost:8283/Employee_Management_System/Login.jsp";
+                            		});
+                            	}
+                            </script>
                         </nav> 
                     </div>
                 </div> <!-- row -->
             </div> <!-- container -->
         </div> <!-- navigation -->
-
 </body>
 </html>
